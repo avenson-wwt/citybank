@@ -6,6 +6,7 @@ variable "ARM_CLIENT_SECRET" {}
 variable "ARM_CLIENT_ID" {}
 
 variable "rghub" {}
+variable "rgcore" {}
 variable "ussc" {}
 # variable "hubvnet-prefix" {}
 variable "itss-addcs" {
