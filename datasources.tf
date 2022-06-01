@@ -7,6 +7,10 @@ data "azurerm_resource_group" "rgdata" {
   name = var.rghub
 }
 
+data "azurerm_resource_group" "rgcoredata" {
+  name = var.rgcore
+}
+
 # Data for ITSS Hub Virtual Network - S. Central #
 data "azurerm_virtual_network" "scus_hubvnetdata" {
   name = var.hubvnet
