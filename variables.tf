@@ -30,4 +30,3 @@ variable "sub-pan-mgmt" {}
 variable "avset-dc-ussc" {}
 variable "sub-srv-itss" {}
 variable "sub-srvitss-prefix" {}
-variable "scus_hubvnetname" {}
