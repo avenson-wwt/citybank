@@ -1,5 +1,5 @@
 resource "azurerm_network_interface" "nic" {
-  name                = "nic${count.index}"
+  name                = "nic-usscprddc0${count.index}"
   location            = data.azurerm_resource_group.rgdata.location
   resource_group_name = data.azurerm_resource_group.rgdata.name
   count               = 2
@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "nic" {
 
 
 resource "azurerm_virtual_machine" "vm" {
-  name                  = "vm${count.index}"
+  name                  = "usscprddc0${count.index}"
   location              = data.azurerm_resource_group.rgdata.location
   resource_group_name   = data.azurerm_resource_group.rgdata.name
   availability_set_id   = data.azurerm_availability_set.avsetdcdata.id
