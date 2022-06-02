@@ -7,6 +7,7 @@ data "azurerm_resource_group" "rgdata" {
   name = var.rghub
 }
 
+# Get the existing rg-coreinfra Resoruce Group
 data "azurerm_resource_group" "rgcoredata" {
   name = var.rgcore
 }
@@ -22,4 +23,9 @@ data "azurerm_subnet" "subnetdata" {
   name = var.sub-srv-itss
   resource_group_name = var.rgcore
   virtual_network_name = var.hubvnet
+}
+
+data "azurerm_availability_set" "avsetdcdata" {
+  name                = var.avset-dc-ussc
+  resource_group_name = var.rghub
 }
