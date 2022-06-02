@@ -17,3 +17,9 @@ data "azurerm_virtual_network" "scus_hubvnetdata" {
   resource_group_name = var.rgcore
 }
 
+# Data for Target VNET Subnet #
+data "azurerm_subnet" "subnetdata" {
+  name = var.sub-srv-itss
+  resource_group_name = var.rgcore
+  virtual_network_name = var.hubvnet
+}
