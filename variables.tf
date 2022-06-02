@@ -30,3 +30,10 @@ variable "sub-pan-mgmt" {}
 variable "avset-dc-ussc" {}
 variable "sub-srv-itss" {}
 variable "sub-srvitss-prefix" {}
+variable "image_publisher" {}
+variable "image_offer" {}
+variable "image_sku" {}
+variable "image_version" {}
+variable "admin_username" {}
+variable "admin_password" {}
+variable "vm_size" {}
