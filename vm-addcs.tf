@@ -1,5 +1,5 @@
 resource "azurerm_network_interface" "nic" {
-  name                = "nic-usscprddc0${count.index}"
+  name                = "nic-usscprddc${count.index}"
   location            = data.azurerm_resource_group.rgdata.location
   resource_group_name = data.azurerm_resource_group.rgdata.name
   count               = 2
@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "nic" {
 
 
 resource "azurerm_virtual_machine" "vm" {
-  name                  = "usscprddc0${count.index}"
+  name                  = "usscprddc${count.index}"
   location              = data.azurerm_resource_group.rgdata.location
   resource_group_name   = data.azurerm_resource_group.rgdata.name
   availability_set_id   = data.azurerm_availability_set.avsetdcdata.id
@@ -29,12 +29,12 @@ resource "azurerm_virtual_machine" "vm" {
   }
 
   storage_os_disk {
-    name          = "osdisk${count.index}"
+    name          = "osdisk-usscprddc${count.index}"
     create_option = "FromImage"
   }
 
   os_profile {
-    computer_name  = "vm${count.index}"
+    computer_name  = "usscprddc${count.index}"
     admin_username = var.admin_username
     admin_password = var.admin_password
   }
